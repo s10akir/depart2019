@@ -20,4 +20,14 @@ router.post('/signup', (req, res) => {
   });
 });
 
+/**
+ * user.idをキーにユーザを削除する
+ */
+router.delete('/:id', (req, res) => {
+  res.json({
+    status: 'err'
+  });
+});
+
+
 module.exports = router;
