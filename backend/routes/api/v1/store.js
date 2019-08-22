@@ -45,28 +45,6 @@ passport.deserializeUser((username, done) => {
 });
 
 /**
- * store.idをキーにストア情報を取得する
- */
-router.get('/:id', (req, res) => {
-  Store.find({ username: req.params.id }, (err, doc) => {
-    if (err) {
-      res.json({
-        err: 'database error.'
-      });
-    } else if (doc.length === 0) {
-      res.json({
-        err: 'store not found.'
-      });
-    } else {
-      const store = delete doc[0].password;
-      res.json(
-        store
-      );
-    }
-  });
-});
-
-/**
  * ストアを新規に作成する
  */
 router.post('/signup', (req, res) => {
@@ -121,9 +99,9 @@ router.delete('/:id', (req, res) => {
 /**
  * サービスへのログインを行う
  */
-router.post('/login', (req, res) => {
+router.post('/login', passport.authenticate('local'), (req, res) => {
   res.json({
-    status: 'err'
+    status: 'success'
   });
 });
 
@@ -131,9 +109,16 @@ router.post('/login', (req, res) => {
  * サービスからのログアウトを行う
  */
 router.get('/logout', (req, res) => {
-  res.json({
-    status: 'err'
-  });
+  if (req.isAuthenticated()) {
+    req.logout();
+    res.json({
+      status: 'success'
+    });
+  } else {
+    res.json({
+      err: 'not logined'
+    });
+  }
 });
 
 /**
@@ -142,6 +127,28 @@ router.get('/logout', (req, res) => {
 router.post('/search', (req, res) => {
   res.json({
     status: 'err'
+  });
+});
+
+/**
+ * store.idをキーにストア情報を取得する
+ */
+router.get('/:id', (req, res) => {
+  Store.find({ username: req.params.id }, (err, doc) => {
+    if (err) {
+      res.json({
+        err: 'database error.'
+      });
+    } else if (doc.length === 0) {
+      res.json({
+        err: 'store not found.'
+      });
+    } else {
+      const store = delete doc[0].password;
+      res.json(
+        store
+      );
+    }
   });
 });
 
