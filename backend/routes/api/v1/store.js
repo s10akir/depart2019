@@ -125,8 +125,12 @@ router.get('/logout', (req, res) => {
  * ストアの検索を行う
  */
 router.post('/search', (req, res) => {
-  res.json({
-    status: 'err'
+  Store.find({ name: req.body.name }, (err, doc) => {
+    if (err) {
+      res.json({ err });
+    } else {
+      res.json(doc);
+    }
   });
 });
 
