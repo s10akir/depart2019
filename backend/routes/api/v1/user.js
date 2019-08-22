@@ -91,9 +91,16 @@ router.post('/login', passport.authenticate('local'), (req, res) => {
  * サービスからのログアウトを行う
  */
 router.get('/logout', (req, res) => {
-  res.json({
-    status: 'err'
-  });
+  if (req.isAuthenticated()) {
+    req.logout();
+    res.json({
+      status: 'success'
+    });
+  } else {
+    res.json({
+      err: 'not logined.'
+    });
+  }
 });
 
 module.exports = router;
