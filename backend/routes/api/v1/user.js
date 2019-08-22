@@ -44,21 +44,31 @@ passport.deserializeUser((id, done) => {
 });
 
 /**
- * user.idをキーにユーザ情報を取得する
- */
-router.get('/:id', (req, res) => {
-  res.json({
-    status: 'err'
-  });
-});
-
-/**
  * userを新規に作成する
  */
 router.post('/signup', (req, res) => {
-  res.json({
-    status: 'err'
-  });
+  const { username, password } = req.body;
+
+  if (!username || !password) {
+    console.log(username);
+    console.log(password);
+    res.json({ err: 'params not enough.' });
+  } else {
+    User.find({ username }, (err, doc) => {
+      if (doc.length !== 0) {
+        res.json({ err: 'user exist.' });
+      } else {
+        new User({
+          username,
+          password,
+          created_at: new Date(),
+          updated_at: new Date()
+        }).save();
+
+        res.json({ status: 'success' });
+      }
+    });
+  }
 });
 
 /**
