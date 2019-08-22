@@ -6,6 +6,7 @@ const path = require('path');
 
 const indexRouter = require('./routes/index');
 const userRouter = require('./routes/api/v1/user');
+const storeRouter = require('./routes/api/v1/store');
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/api/v1/user', userRouter);
+app.use('/api/v1/store', storeRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
