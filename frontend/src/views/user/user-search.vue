@@ -1,5 +1,5 @@
 <template>
-	<div id="app">
-        user-search
-    </div>
+  <div id="app">
+    user-search
+  </div>
 </template>

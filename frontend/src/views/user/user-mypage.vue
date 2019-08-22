@@ -1,5 +1,5 @@
 <template>
-	<div id="app">
-        user-mypage
-    </div>
+  <div id="app">
+    user-mypage
+  </div>
 </template>
