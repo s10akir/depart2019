@@ -4,7 +4,6 @@ const httpErrors = require('http-errors');
 const logger = require('morgan');
 const path = require('path');
 
-const indexRouter = require('./routes/index');
 const userRouter = require('./routes/api/v1/user');
 const storeRouter = require('./routes/api/v1/store');
 const itemRouter = require('./routes/api/v1/item');
@@ -19,16 +18,15 @@ app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
 app.use('/api/v1/user', userRouter);
 app.use('/api/v1/store', storeRouter);
 app.use('/api/v1/item', itemRouter);
 app.use('/api/v1/fav', favRouter);
 
 // catch 404 and forward to error handler
-app.use((req, res, next) => {
-  next(httpErrors(404));
-});
+// app.use((req, res, next) => {
+//   next(httpErrors(404));
+// });
 
 // error handler
 app.use((err, req, res, next) => {
