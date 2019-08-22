@@ -1,3 +1,3 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/depart', { NewUrlParser: true });
+mongoose.connect('mongodb://localhost:27017/depart', { useNewUrlParser: true });
