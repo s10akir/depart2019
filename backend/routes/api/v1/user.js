@@ -38,4 +38,13 @@ router.post('/login', (req, res) => {
   });
 });
 
+/**
+ * サービスからのログアウトを行う
+ */
+router.get('/logout', (req, res) => {
+  res.json({
+    status: 'err'
+  });
+});
+
 module.exports = router;
