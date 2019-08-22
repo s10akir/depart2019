@@ -70,8 +70,42 @@ router.get('/:id', (req, res) => {
  * ストアを新規に作成する
  */
 router.post('/signup', (req, res) => {
-  res.json({
-    status: 'err'
+  Store.find({ username: req.body.username }, (err, doc) => {
+    if (doc.length !== 0) {
+      res.json({
+        err: 'store exist'
+      });
+    } else {
+      const {
+        username, password, email, tel, name, station, prefecture, city, block_number, opening_hours
+      } = req.body;
+
+      if (username, password, email, tel, name, station, prefecture, city, block_number, opening_hours) {
+
+        new Store({
+          username,
+          password,
+          email,
+          tel,
+          name,
+          station,
+          prefecture,
+          city,
+          block_number,
+          opening_hours,
+          created_at: new Date(),
+          updated_at: new Date(),
+        }).save();
+
+        res.json({
+          status: 'status'
+        });
+      } else {
+        res.json({
+          err: 'param not enought.'
+        });
+      }
+    }
   });
 });
 
