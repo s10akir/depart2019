@@ -11,4 +11,13 @@ router.get('/:id', (req, res) => {
   });
 });
 
+/**
+ * userを新規に作成する
+ */
+router.post('/signup', (req, res) => {
+  res.json({
+    status: 'err'
+  });
+});
+
 module.exports = router;
