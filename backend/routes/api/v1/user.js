@@ -50,8 +50,6 @@ router.post('/signup', (req, res) => {
   const { username, password } = req.body;
 
   if (!username || !password) {
-    console.log(username);
-    console.log(password);
     res.json({ err: 'params not enough.' });
   } else {
     User.find({ username }, (err, doc) => {
