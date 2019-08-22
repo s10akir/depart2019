@@ -1,5 +1,6 @@
 <template>
 	<div id="app">
+
 	  <div id="nav-drawer">
 	      <input id="nav-input" type="checkbox" class="nav-unshown">
 	      <label id="nav-open" for="nav-input"><span></span></label>
