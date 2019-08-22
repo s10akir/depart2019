@@ -29,5 +29,13 @@ router.delete('/:id', (req, res) => {
   });
 });
 
+/**
+ * サービスへのログインを行う
+ */
+router.post('/login', (req, res) => {
+  res.json({
+    status: 'err'
+  });
+});
 
 module.exports = router;
