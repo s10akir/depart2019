@@ -30,12 +30,12 @@ passport.use(new LocalStrategy((username, password, done) => {
   });
 }));
 
-passport.serializeUser((id, done) => {
-  done(null, id);
+passport.serializeUser((username, done) => {
+  done(null, username);
 });
 
-passport.deserializeUser((id, done) => {
-  User.find({ id }, (error, doc) => {
+passport.deserializeUser((username, done) => {
+  User.find({ username }, (error, doc) => {
     if (error) {
       return done(error);
     }
