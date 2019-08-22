@@ -28,9 +28,6 @@
 	  width: 30px;
 	  height: 22px;
 	  vertical-align: middle;
-	 /* position:absolute;
-	  top:50px;
-	  left:50px;*/
 	}
 
 	/*ハンバーガーアイコンをCSSだけで表現*/
