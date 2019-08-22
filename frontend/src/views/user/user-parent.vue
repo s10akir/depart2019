@@ -10,6 +10,7 @@
 	      	<a href="#" class="list-group-item list-group-item-action bg-light">設定</a>
 	      </div>
       </div>
+	  <router-view/>
 	</div>
 </template>
 <style>
