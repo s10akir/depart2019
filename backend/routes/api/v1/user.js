@@ -12,7 +12,7 @@ router.use(passport.initialize());
 router.use(passport.session());
 
 passport.use(new LocalStrategy((username, password, done) => {
-  User.find({ id: username }, (err, doc) => {
+  User.find({ username }, (err, doc) => {
     // TODO: need refactoring
     if (err !== null) {
       return done({ err: 'database error.' });
