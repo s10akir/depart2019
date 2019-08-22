@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import UserLogin from './views/user-login.vue'
 import UserHome from './views/user-home.vue'
+import UserParent from './views/user-parent.vue'
 
 import UserParent from './views/user-parent.vue'
 
@@ -37,5 +38,6 @@ export default new Router({
         component:UserSearch
       },
     ]}
+
   ]
 })
