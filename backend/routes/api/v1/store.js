@@ -47,4 +47,13 @@ router.get('/logout', (req, res) => {
   });
 });
 
+/**
+ * ストアの検索を行う
+ */
+router.post('/search', (req, res) => {
+  res.json({
+    status: 'err'
+  });
+});
+
 module.exports = router;
