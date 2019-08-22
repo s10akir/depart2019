@@ -12,7 +12,7 @@ const Store = mongoose.model('Store');
 router.use(passport.initialize());
 router.use(passport.session());
 
-passport.use(new LocalStrategy((username, password, done) => {
+passport.use('store-login', new LocalStrategy((username, password, done) => {
   Store.find({ username }, (err, doc) => {
     // TODO: need refactoring
     if (err !== null) {
@@ -20,7 +20,8 @@ passport.use(new LocalStrategy((username, password, done) => {
     }
 
     if (doc.length === 0) {
-      return done({ err: 'user not found.' });
+      console.log(username);
+      return done({ err: 'store not found.' });
     }
 
     if (doc[0].password !== password) {
@@ -99,7 +100,7 @@ router.delete('/:id', (req, res) => {
 /**
  * サービスへのログインを行う
  */
-router.post('/login', passport.authenticate('local'), (req, res) => {
+router.post('/login', passport.authenticate('store-login'), (req, res) => {
   res.json({
     status: 'success'
   });

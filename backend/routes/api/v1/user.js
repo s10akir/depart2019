@@ -11,7 +11,7 @@ const router = Router();
 router.use(passport.initialize());
 router.use(passport.session());
 
-passport.use(new LocalStrategy((username, password, done) => {
+passport.use('user-login', new LocalStrategy((username, password, done) => {
   User.find({ username }, (err, doc) => {
     // TODO: need refactoring
     if (err !== null) {
@@ -81,7 +81,7 @@ router.delete('/:id', (req, res) => {
 /**
  * サービスへのログインを行う
  */
-router.post('/login', passport.authenticate('local'), (req, res) => {
+router.post('/login', passport.authenticate('user-login'), (req, res) => {
   res.json({
     status: 'login success.'
   });
