@@ -20,17 +20,17 @@ const Item = new mongoose.Schema({
     required: true,
     min: 0
   },
-  best_by: {  // 賞味期限
+  best_by: { // 賞味期限
     type: Date
   },
-  use_by: {  // 消費期限
+  use_by: { // 消費期限
     type: Date
   },
-  published_until: {  // 掲載期限
+  published_until: { // 掲載期限
     type: Date,
     required: true
   },
-  image: {  // 商品写真のurl
+  image: { // 商品写真のurl
     type: String
   },
   created_at: {
