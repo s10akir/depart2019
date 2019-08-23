@@ -6,11 +6,14 @@
 		<input type="text"><br>
 		<label>パスワード</label>
 		<input type="text"><br>
-		<button type="button" class="btn btn-outline-primary">LOG IN</button>
-
+		<router-link to="/user/main">
+			<button type="button" class="btn btn-outline-primary">
+				Login
+			</button>
+		</router-link>
 	</div>
 </template>
 
+
 <style>
-	
 </style>

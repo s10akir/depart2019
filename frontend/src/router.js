@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import UserLogin from './views/user/user-login.vue'
-import UserHome from './views/user/user-home.vue'
-import UserParent from './views/user/user-parent.vue'
+import UserLogin from './views/user/login.vue'
+import UserHome from './views/user/home.vue'
+import UserParent from './views/user/parent.vue'
 
-import UserMyPage from './views/user/user-mypage.vue'
-import UserBlog from './views/user/user-blog.vue'
-import UserSearch from './views/user/user-search.vue'
+import UserMyPage from './views/user/mypage.vue'
+import UserBlog from './views/user/blog.vue'
+//import UserSearch from './views/user/user-search.vue'
 
 Vue.use(Router)
 
@@ -15,26 +15,28 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/home',
+      path: '',
       component: UserHome
     },
     {
-      path: '/user-login',
+      path: '/user/login',
       component: UserLogin
     },
-    {path:'/main',component:UserParent,children:[
+    {path:'/user/main',component:UserParent,children:[
       {
-        path:'',
-        component:UserMyPage
-      },
-      {
-        path:'blog',
+        path:'/',
         component:UserBlog
       },
+      /*
       {
         path:'search',
         component:UserSearch
       },
+      */
+    {
+      path: 'mypage',
+      component: UserMyPage
+    },
     ]}
 
   ]
