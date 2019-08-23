@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD:frontend/src/views/user/login.vue
 	<div id="app">
 		<h1>FOOSHEL</h1>
 		<h2>ユーザーとしてのログイン</h2>
