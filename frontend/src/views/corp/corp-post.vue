@@ -11,10 +11,10 @@
     <h1>食品を登録する</h1>
     <div class="add">
       <div class="info">
-        <div><label>食品名　　　<input type="text"></label></div>
+        <div><label>食品名　　　<input type="text" ></label></div>
         <div><label>賞味期限　　<input type="date"></label></div>
-        <div><label>定価　　　　<input type="number"></label></div>
-        <div><label>値下げ価格　<input type="number"></label></div>
+        <div><label>定価　　　　<input type="text"></label></div>
+        <div><label>値下げ価格　<input type="text"></label></div>
       </div>
       <div class="img">
         <p class="img-post">img</p>
@@ -68,8 +68,8 @@
   }
   .add{
     text-align:center;
-    height:300px;
-    width:600px;
+    height:350px;
+    width:1000px;
     margin-left:500px;
     margin-top:50px;
   }
