@@ -4,9 +4,18 @@ const { Router } = require('express');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const mongoose = require('mongoose');
+const multer = require('multer');
 
 const Item = mongoose.model('Item');
 const Store = mongoose.model('Store');
+
+const storage = multer.diskStorage({
+  destination: './public/images',
+//  filename: (req, file, cb) => {
+//    cb(null, file.originalname);
+//  }
+});
+const uploader = multer({ storage });
 
 const router = Router();
 router.use(passport.initialize());
@@ -124,6 +133,19 @@ router.post('/search', (req, res) => {
       );
     }
   });
+});
+
+router.post('/image/:id', uploader.single('image'), (req, res) => {
+  Item.update({ _id: req.params.id },
+    {
+      $set: { image: req.file.path }
+    }, (err) => {
+      if (err) {
+        res.json(err);
+      } else {
+        res.json({ status: 'success', path: req.file.path });
+      }
+    });
 });
 
 module.exports = router;

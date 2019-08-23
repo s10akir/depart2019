@@ -77,7 +77,7 @@ router.post('/signup', (req, res) => {
         }).save();
 
         res.json({
-          status: 'status'
+          status: 'success'
         });
       } else {
         res.json({
