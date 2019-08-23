@@ -21,7 +21,7 @@
 </template>
 <script>
 export default{
-  created() {
+  created: function() {
     this.$parent.message='マイページ'
   },
   data:function(){
