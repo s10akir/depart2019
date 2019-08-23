@@ -12,9 +12,9 @@
     <div class="rogo-case"><img src="../../assets/foodshellロゴ２.png" class="rogo"></div>
     <div><input type="text" placeholder="ユーザーID"></div>
     <div><input type="password" placeholder="パスワード"></div><br><br>
-    <button　type="button" class="btn-gradient-radius">ログイン</button><br><br>
+    <button　type="button" class="btn-gradient-radius" onclick="location.href='http://localhost:8080/corp-home/'">ログイン</button><br><br>
     <router-link to="#"><p class="forget">ID・パスワードを忘れた方はこちら</p></router-link>
-        <router-link to="#"><button　type=button>登録</button></router-link>
+        <router-link to="#"><button　type=button onclick="location.href='http://localhost:8080/corp-change'">登録</button></router-link>
   </div>
 </template>
 
