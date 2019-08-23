@@ -9,7 +9,8 @@
     <div id = "blog">
     <Advertise v-bind:src="advertise.src"/>
         <Card
-        v-for="card in mockcards"
+        v-for="card in mockcards "
+        :key="card.id"
         v-bind:src="card.src"
         v-bind:isNew="card.isNew"
         ></Card>
