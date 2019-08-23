@@ -8,7 +8,8 @@
         <li class="mypage"><account-icon /></li>
       </ul>
     </header>
-    <h1>FOOSHEL</h1>
+    <!--<h1>FOOSHEL</h1>-->
+    <div class="rogo-case"><img src="../../assets/foodshellロゴ２.png" class="rogo"></div>
     <div><input type="text" placeholder="ユーザーID"></div>
     <div><input type="password" placeholder="パスワード"></div><br><br>
     <button　type="button" class="btn-gradient-radius">ログイン</button><br><br>
@@ -50,6 +51,14 @@
     margin:30px;
   }
   /*headerのcss------------------------------------------------------------------------------*/
+  .rogo-case{
+    height:245px;
+    margin-top:30px;
+  }
+  .rogo{
+    position:absolute;
+    left:430px;
+  }
   h1{
     margin-top:150px;
     font-size:150px;

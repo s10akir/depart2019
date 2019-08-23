@@ -9,41 +9,39 @@
       </ul>
     </header>
     <div class="info">
-      <div class="img">
-        <p class="img-post">img</p>
-      </div>
+      <div class="title"><account-icon />Mypage</div>
       <form>
         <div class="form-group">
           <label for="formGroupExampleInput">店名</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="スーパーマーケット五反田店">
         </div>
         <div class="form-group">
           <label for="formGroupExampleInput2">ID</label>
-          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="12345678">
         </div>
         <div class="form-group">
           <label for="formGroupExampleInput2">パスワード</label>
-          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="abcdefgh">
         </div>
         <div class="form-group">
           <label for="formGroupExampleInput2">営業時間</label>
-          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="9:00~22:00">
         </div>
         <div class="form-group">
           <label for="formGroupExampleInput2">最寄り駅</label>
-          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="JR山手線・都営浅草線「五反田駅」">
         </div>
         <div class="form-group">
           <label for="formGroupExampleInput2">住所</label>
-          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="東京都品川区東五反田123-45">
         </div>
         <div class="form-group">
           <label for="formGroupExampleInput2">電話番号</label>
-          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="123-456-7890">
         </div>
       </form>
-    </div>
-    <router-link to="#"><button　type=button>登録</button></router-link>
+    <router-link to="#"><button type=button>登録</button></router-link>
+  </div>
   </div>
 </template>
 
@@ -80,31 +78,26 @@
     margin:30px;
   }
   /*headerのcss------------------------------------------------------------------------------*/
-  .img-post{
-    border:2px solid black;
-    padding:100px;
-    width:600px;
-    height:600px;
-    margin-top:50px;
+  .title{
+    width:80px;
+    height:20px;
     position:absolute;
-    left:50px;
-    float:left;
   }
   form{
     float:left;
     width:600px;
     height:600px;
     position:absolute;
-    left:750px;
-    top:170px;
+    left:90px;
+    top:50px;
   }
   .info{
     border:2px solid #EB9B9B;
-    width:1500px;
+    width:800px;
     height:670px;
     position:absolute;
     top:170px;
-    left:20px;
+    left:430px;
   }
   button{
     font-size: 1.4em;
@@ -120,6 +113,6 @@
     margin-bottom:30px;
     position:absolute;
     top:850px;
-    right:730px;
+    right:660px;
   }
   </style>
