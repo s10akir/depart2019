@@ -9,10 +9,14 @@
     <div id = "blog">
     <Advertise v-bind:src="advertise.src"/>
         <Card
-        v-for="card in mockcards "
-        :key="card.id"
-        v-bind:src="card.src"
-        v-bind:isNew="card.isNew"
+        v-for="item in items"
+        :key="item.id"
+        :image="item.image"
+        :store_name="item.store_name"
+        :item_name="item.item_name"
+        :original_price="item.original_price"
+        :price="item.price"
+        :is_new="item.isNew"
         ></Card>
       </div>
     </div>
@@ -25,11 +29,32 @@ export default{
     data:function() {
       return {
         advertise:{src:"http://placehold.jp/300x250.png?text={広告}"},
-        mockcards:[
-          {src:"http://placehold.jp/250x250.png?text={モック画像1}",isNew:true},
-          {src:"http://placehold.jp/250x250.png?text={モック画像2}",isNew:true},
-          {src:"http://placehold.jp/250x250.png?text={モック画像3}",isNew:false}
-        ]
+        items:[
+          {
+            store_name: 'ファミリーマート五反田駅前店',
+            item_name: '牛乳',
+            original_price: '120',
+            price: '100',
+            image:"http://placehold.jp/250x250.png?text={モック画像1}",
+            is_new: true
+          },
+          {
+            store_name: 'ファミリーマート五反田駅前店',
+            item_name: 'コーヒー',
+            original_price: '148',
+            price: '110',
+            image:"http://placehold.jp/250x250.png?text={モック画像1}",
+            is_new: true
+          },
+          {
+            store_name: 'ファミリーマート五反田駅前店',
+            item_name: 'ストロングゼロ',
+            original_price: '250',
+            price: '150',
+            image:"http://placehold.jp/250x250.png?text={モック画像1}",
+            is_new: true
+          },
+        ],
       }
     }
   }
