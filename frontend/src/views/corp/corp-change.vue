@@ -40,8 +40,8 @@
           <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="123-456-7890">
         </div>
       </form>
-    </div>
     <router-link to="#"><button type=button>登録</button></router-link>
+  </div>
   </div>
 </template>
 
@@ -78,11 +78,14 @@
     margin:30px;
   }
   /*headerのcss------------------------------------------------------------------------------*/
+<<<<<<< HEAD
   .title{
     width:80px;
     height:20px;
     position:absolute;
   }
+=======
+>>>>>>> origin/develop_frontside
   .img-post{
     border:2px solid black;
     padding:100px;
@@ -91,12 +94,17 @@
     margin-top:50px;
     position:absolute;
     left:50px;
+<<<<<<< HEAD
+=======
+    float:left;
+>>>>>>> origin/develop_frontside
   }
   form{
     float:left;
     width:600px;
     height:600px;
     position:absolute;
+<<<<<<< HEAD
     left:90px;
     top:50px;
   }
@@ -107,6 +115,18 @@
     position:absolute;
     top:170px;
     left:430px;
+=======
+    left:750px;
+    top:170px;
+  }
+  .info{
+    border:2px solid #EB9B9B;
+    width:1500px;
+    height:670px;
+    position:absolute;
+    top:170px;
+    left:20px;
+>>>>>>> origin/develop_frontside
   }
   button{
     font-size: 1.4em;
@@ -122,6 +142,10 @@
     margin-bottom:30px;
     position:absolute;
     top:850px;
+<<<<<<< HEAD
     right:660px;
+=======
+    right:730px;
+>>>>>>> origin/develop_frontside
   }
   </style>

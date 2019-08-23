@@ -31,6 +31,18 @@
         <!--<input type="text" class="form-control" id="formGroupExampleInput2" placeholder="9:00~22:00">-->
       </div>
       <div class="form-group">
+        <label for="formGroupExampleInput2">ID</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2">パスワード</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2">営業時間</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+      </div>
+      <div class="form-group">
         <label for="formGroupExampleInput2">最寄り駅</label>
         <p class="form-control">JR山手線・都営浅草線「五反田駅」</p>
         <!--<input type="text" class="form-control" id="formGroupExampleInput2" placeholder="JR山手線・都営浅草線「五反田駅」">-->
