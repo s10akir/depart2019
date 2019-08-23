@@ -9,10 +9,11 @@
       </ul>
     </header>
     <h1>FOOSHEL</h1>
-    <div><input type="text" value="ユーザーID"></div>
-    <div><input type="password" value="パスワード"></div><br><br>
+    <div><input type="text" placeholder="ユーザーID"></div>
+    <div><input type="password" placeholder="パスワード"></div><br><br>
     <button　type="button" class="btn-gradient-radius">ログイン</button><br><br>
     <router-link to="#"><p class="forget">ID・パスワードを忘れた方はこちら</p></router-link>
+        <router-link to="#"><button　type=button>登録</button></router-link>
   </div>
 </template>
 
@@ -74,6 +75,19 @@
     margin-bottom:30px;
     width:270px;
     margin-left:650px;
+  }
+  button{
+    font-size: 1.4em;
+    font-weight: bold;
+    padding: 5px 70px;
+    background-color: #91E0E6;
+    color: #fff;
+    border-style: none;
+    box-shadow: 2px 2px 3px 1px #666;
+    -moz-box-shadow: 2px 2px 3px 1px #666;
+    -webkit-box-shadow: 2px 2px 3px 1px #666;
+    border-radius:25px;
+    margin-bottom:30px;
   }
 
 </style>

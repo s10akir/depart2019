@@ -17,15 +17,27 @@
         <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
       </div>
       <div class="form-group">
+        <label for="formGroupExampleInput2">ID</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2">パスワード</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2">営業時間</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+      </div>
+      <div class="form-group">
         <label for="formGroupExampleInput2">最寄り駅</label>
         <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
       </div>
-            <div class="form-group">
+      <div class="form-group">
         <label for="formGroupExampleInput2">住所</label>
         <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
       </div>
-            <div class="form-group">
-        <label for="formGroupExampleInput2">営業時間</label>
+      <div class="form-group">
+        <label for="formGroupExampleInput2">電話番号</label>
         <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
       </div>
     </form>
@@ -79,8 +91,8 @@
     float:left;
     width:600px;
     height:600px;
+    margin-top:5px;
     position:absolute;
     left:750px;
-    top:500px;
   }
   </style>
