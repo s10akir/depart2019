@@ -8,9 +8,19 @@
         <li class="mypage"><account-icon /></li>
       </ul>
     </header>
-    <h1>FOOSHEL</h1>
-    <input type="text" value="ユーザーID">
-    <input type="text" value="パスワード">
+        <div class="img">
+      <p class="img-post">img</p>
+    </div>
+        <div class="img">
+      <p class="img-post2">img</p>
+    </div>
+        <div class="img">
+      <p class="img-post3">img</p>
+    </div>
+    <div class="home-text">
+      <p>賞味期限間近の食品を安価で登録することで、<br>お客様に購入してもらうことができます。</p>
+    </div>
+    <div><router-link to="#"><button　type=button　class="regista">食品を登録する</button></router-link></div>
   </div>
 </template>
 
@@ -27,12 +37,6 @@
 
 <style scoped>
   /*headerのcss-----------------------------------------------------------------------------*/
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: #6c6b6b;
-  }
   header{
     height:80px;
     background-color:#EB9B9B;
@@ -53,14 +57,65 @@
     margin:30px;
   }
   /*headerのcss------------------------------------------------------------------------------*/
-  h1{
-    margin-top:150px;
-    font-size:150px;
-    color:#EB9B9B;
+  .img-post{
+    border:2px solid black;
+    padding:100px;
+    width:300px;
+    height:300px;
+    margin-top:50px;
+    position:absolute;
+    left:50px;
+    float:left;
+    top:300px;
   }
-  input{
-    width:700px;
-    height:50px;
-    border:1px solid #EB9B9B;
+    .img-post2{
+    border:2px solid black;
+    padding:100px;
+    width:300px;
+    height:300px;
+    margin-top:50px;
+    position:absolute;
+    left:450px;
+    float:left;
+    top:300px;
   }
+    .img-post3{
+    border:2px solid black;
+    padding:100px;
+    width:300px;
+    height:300px;
+    margin-top:50px;
+    position:absolute;
+    left:850px;
+    float:left;
+    top:300px;
+  }
+  .img{
+    width:300px;
+    height:300px;
+  }
+  .home-text{
+    position:absolute;
+    top:700px;
+    left:600px;
+  }
+  button{
+    font-size: 1.4em;
+    font-weight: bold;
+    padding: 5px 70px;
+    background-color: #91E0E6;
+    color: #fff;
+    border-style: none;
+    box-shadow: 2px 2px 3px 1px #666;
+    -moz-box-shadow: 2px 2px 3px 1px #666;
+    -webkit-box-shadow: 2px 2px 3px 1px #666;
+    border-radius:25px;
+    margin-bottom:30px;
+  }
+  .regista{
+    position:absolute;
+    top:800px;
+    left:600px;
+  }
+
 </style>

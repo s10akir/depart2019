@@ -16,16 +16,11 @@
 			  </button>
 			  <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 			  <i class="fa fa-home" aria-hidden="true"></i>
-			  <menu-icon />
 		  <router-view/>
 		</header>
 		</div>
 </template>
-import MenuIcon from "vue-material-design-icons/Menu.vue"
- 
-components: {
-  MenuIcon
-}
+
 <style>
 	#nav-drawer {
 	  position: relative;

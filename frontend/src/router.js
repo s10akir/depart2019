@@ -7,6 +7,9 @@ import UserParent from './views/user/user-parent.vue'
 import UserMyPage from './views/user/user-mypage.vue'
 import UserBlog from './views/user/user-blog.vue'
 import UserSearch from './views/user/user-search.vue'
+import CorpLogin from './views/corp/corp-login.vue'
+import CorpPost from './views/corp/corp-post.vue'
+import CorpMypage from './views/corp/corp-mypage.vue'
 import CorpHome from './views/corp/corp-home.vue'
 
 Vue.use(Router)
@@ -37,6 +40,18 @@ export default new Router({
         component:UserSearch
       },
      {
+      path: '/corp-login',
+      component: CorpLogin
+     },
+      {
+      path: '/corp-post',
+      component: CorpPost
+     },
+     {
+      path: '/corp-mypage',
+      component: CorpMypage
+     },
+          {
       path: '/corp-home',
       component: CorpHome
      }
