@@ -2,21 +2,18 @@
   <div id="app">
     <header>
       <ul>
-        <li class=home-icon><home-icon /><p class="header-text">HOME</p></li>
+        <li class=home-icon><home-icon class="home-icon1"/><p class="header-text">HOME</p></li>
         <li><router-link to="#"><p class="header-text">食品を登録する</p></router-link></li>
         <li><router-link to="#"><p class="header-text">編集</p></router-link></li>
         <li class="mypage"><account-icon /></li>
       </ul>
     </header>
-        <div class="img">
-      <p class="img-post">img</p>
-    </div>
-        <div class="img">
-      <p class="img-post2">img</p>
-    </div>
-        <div class="img">
-      <p class="img-post3">img</p>
-    </div>
+      <div class="ad"></div>
+      <div class="img">
+        <p class="img-post">img</p>
+        <p class="img-post2">img</p>
+        <p class="img-post3">img</p>
+      </div>
     <div class="home-text">
       <p>賞味期限間近の食品を安価で登録することで、<br>お客様に購入してもらうことができます。</p>
     </div>
@@ -37,6 +34,10 @@
 
 <style scoped>
   /*headerのcss-----------------------------------------------------------------------------*/
+  .home-icon1{
+    height:20px !important;
+    width:20px !important;
+  }
   header{
     height:80px;
     background-color:#EB9B9B;
@@ -60,44 +61,55 @@
   .img-post{
     border:2px solid black;
     padding:100px;
-    width:300px;
-    height:300px;
+    width:350px;
+    height:350px;
     margin-top:50px;
     position:absolute;
-    left:50px;
+    left:350px;
     float:left;
-    top:300px;
+    top:200px;
+    display:inline-block;
+    margin-right:50px;
+  }
+  .ad{
+    border: 2px solid black;
+    width:200px;
+    height:700px;
+    display:inline-block;
+    position:absolute;
+    left:30px;
+    top:200px;
+  }
+  .img{
+    text-align:center;
   }
     .img-post2{
     border:2px solid black;
     padding:100px;
-    width:300px;
-    height:300px;
+    width:350px;
+    height:350px;
     margin-top:50px;
     position:absolute;
-    left:450px;
+    left:750px;
     float:left;
-    top:300px;
+    top:200px;
   }
     .img-post3{
     border:2px solid black;
     padding:100px;
-    width:300px;
-    height:300px;
+    width:350px;
+    height:350px;
     margin-top:50px;
     position:absolute;
-    left:850px;
+    left:1150px;
     float:left;
-    top:300px;
-  }
-  .img{
-    width:300px;
-    height:300px;
+    top:200px;
   }
   .home-text{
     position:absolute;
     top:700px;
-    left:600px;
+    left:680px;
+    font-size:1.4em;
   }
   button{
     font-size: 1.4em;
@@ -115,7 +127,7 @@
   .regista{
     position:absolute;
     top:800px;
-    left:600px;
+    left:760px;
   }
 
 </style>

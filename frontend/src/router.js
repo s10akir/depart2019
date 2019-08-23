@@ -10,6 +10,7 @@ import CorpLogin from './views/corp/corp-login.vue'
 import CorpPost from './views/corp/corp-post.vue'
 import CorpMypage from './views/corp/corp-mypage.vue'
 import CorpHome from './views/corp/corp-home.vue'
+import CorpChange from './views/corp/corp-change.vue'
 
 Vue.use(Router)
 
@@ -49,7 +50,11 @@ export default new Router({
           {
       path: '/corp-home',
       component: CorpHome
-     }
+     },
+          {
+      path: '/corp-change',
+      component: CorpChange
+     },
     ]}
   ]
 })
