@@ -1,13 +1,17 @@
 <template>
   <div id="app">
+    <h4>商品を探す</h4>
     <div class="input-group">
-      <input type="text" class="form-control" placeholder="テキスト入力欄">
+      <input type="text" class="form-control" placeholder="キーワード">
       <span class="input-group-btn">
-        <button type="button" class="btn btn-default">検索</button>
+        <button type="button" class="btn btn-outline-primary">検索</button>
       </span>
     </div>
+    <br>
+    <h5>最寄り駅から探す</h5>
+    <button type="button" class="btn btn-outline-success">エリアを選択</button>
     <div id = "blog">
-    <Advertise v-bind:src="advertise.src"/>
+      <img src="../../assets/ad.png">
         <Card
         v-for="item in items"
         :key="item.id"
@@ -23,9 +27,8 @@
   </template>
 <script>
 import Card from '../../components/Card'
-import Advertise from '../../components/Advertise'
 export default{
-  components: {Card,Advertise},
+  components: {Card},
     data:function() {
       return {
         advertise:{src:"http://placehold.jp/300x250.png?text={広告}"},
@@ -35,7 +38,7 @@ export default{
             item_name: '牛乳',
             original_price: '120',
             price: '100',
-            image:"http://placehold.jp/250x250.png?text={モック画像1}",
+            image:"https://i.imgur.com/6RcZWWG.jpg",
             is_new: true
           },
           {
@@ -43,7 +46,7 @@ export default{
             item_name: 'コーヒー',
             original_price: '148',
             price: '110',
-            image:"http://placehold.jp/250x250.png?text={モック画像1}",
+            image:"https://i.imgur.com/6RcZWWG.jpg",
             is_new: true
           },
           {
@@ -51,7 +54,7 @@ export default{
             item_name: 'ストロングゼロ',
             original_price: '250',
             price: '150',
-            image:"http://placehold.jp/250x250.png?text={モック画像1}",
+            image:"https://i.imgur.com/6RcZWWG.jpg",
             is_new: true
           },
         ],
@@ -59,3 +62,13 @@ export default{
     }
   }
 </script>
+
+<style>
+h4 {
+  color: #EB9B9B;
+}
+
+#app {
+  padding-top: 30px;
+}
+</style>
