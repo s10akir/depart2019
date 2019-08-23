@@ -20,7 +20,7 @@
         <p class="img-post">img</p>
       </div>
     </div>
-    <router-link to="#"><button　type=button>登録</button></router-link>
+    <router-link to="#"><button　type=button onclick="location.href='http://localhost:8080/corp-mypage/'">登録</button></router-link>
   </div>
 </template>
 

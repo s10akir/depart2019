@@ -40,7 +40,7 @@
           <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="123-456-7890">
         </div>
       </form>
-    <router-link to="#"><button type=button>登録</button></router-link>
+    <router-link to="#"><button type=button onclick="location.href='http://localhost:8080/corp-mypage'">登録</button></router-link>
   </div>
   </div>
 </template>
@@ -113,6 +113,7 @@
     margin-bottom:30px;
     position:absolute;
     top:850px;
-    right:660px;
+    right:350px;
   }
+
   </style>
