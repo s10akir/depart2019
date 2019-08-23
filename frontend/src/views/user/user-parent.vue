@@ -1,18 +1,23 @@
 <template>
-  <div id="app">
-    <div id="nav-drawer">
-      <input id="nav-input" type="checkbox" class="nav-unshown">
-
-      <label id="nav-open" for="nav-input"></label>
-      <label class="nav-unshown" id="nav-close" for="nav-input"></label>
-
-      <div id="nav-content">
-        <a href="#" class="list-group-item list-group-item-action bg-light">ホーム</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">設定</a>
-      </div>
-    </div>
-    <router-view/>
-	</div>
+	<div id="app">
+	  <header>
+		  <div id="nav-drawer">
+		    <input id="nav-input" type="checkbox" class="nav-unshown">
+		    <label id="nav-open" for="nav-input"><span></span></label>
+		    <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+		    <div id="nav-content">
+		      <a href="#" class="list-group-item list-group-item-action bg-light">ホーム</a>
+		      <a href="#" class="list-group-item list-group-item-action bg-light">設定</a>
+		    </div>
+	    </div>
+	    <button type="button" class="btn btn-default btn-lg">
+		    <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+		  </button>
+		  <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+		  <i class="fa fa-home" aria-hidden="true"></i>
+	    <router-view/>
+	  </header>
+  </div>
 </template>
 
 <style>
