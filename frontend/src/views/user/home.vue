@@ -14,7 +14,7 @@
 
       <br>
       <div>
-        <router-link to="/user/blog"><button type="button" class="btn btn-outline-primary">ログイン</button></router-link>
+        <router-link to="/user/main"><button type="button" class="btn btn-outline-primary">ログイン</button></router-link>
       </div>
       <br>
       <div>
